@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ff4081;
+            font-size: 4rem;
+            margin-top: 3rem;
+        }
+        
+        p {
+            color: #666;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .spinner {
+            width: 150px;
+            height: 150px;
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .colorful {
+            background: linear-gradient(45deg, #ff4081, #ff8e00, #ffcd00, #4caf50, #00bcd4, #3f51b5);
+            background-size: 800% 800%;
+            animation: gradient 10s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+    <%- include('./partials/header.ejs') %>
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="container">
+        <h1>404 Not Found</h1>
+        <div class="spinner colorful"></div>
+        <p>The page you're looking for could not be found.</p>
+        <p>Please check the URL or go back to the <a href="/">homepage</a>.</p>
+    </div>
+</body>
+
+</html>

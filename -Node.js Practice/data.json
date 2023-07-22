@@ -1,0 +1,8 @@
+{
+    "name" : "Nandhu",
+    "age" : 22,
+    "address" : {
+        "House Number" : 808,
+        "Street" : "Kottakuzhy"
+    }
+}

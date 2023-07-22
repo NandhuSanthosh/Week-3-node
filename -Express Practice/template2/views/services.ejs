@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <%- include('./partials/header.ejs') %>
+<body>
+    <header>
+        <h1>Welcome to My Homepage</h1>
+    </header>
+
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <h1>Services!</h1>
+
+        <section>
+            <% if(services.length > 0) { %>
+                <% for(let service of services) { %>
+                    <h3> <%=service.title%></h3>
+                    <p> <%=service.description%></h3>
+                <%}%>
+            <%} else{%>
+                <h3>No services available in your area</h3>
+            <%}%>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

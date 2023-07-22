@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/header.ejs') %>
+<body>
+  <header>
+    <h1><%= heading %></h1>
+  </header>
+  
+  <%- include('./partials/nav.ejs') %>
+  
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Welcome to my homepage! I'm a passionate web developer and I love creating amazing websites.</p>
+    <img src="https://via.placeholder.com/200" alt="Profile Picture" width="200" height="200">
+    </section>
+    
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li>Web Design</li>
+        <li>Web Development</li>
+        <li>Responsive Design</li>
+        <li>Website Maintenance</li>
+      </ul>
+    </section>
+    
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/300x200" alt="Project 1" width="300" height="200">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2" width="300" height="200">
+        <img src="https://via.placeholder.com/300x200" alt="Project 3" width="300" height="200">
+      </div>
+    </section>
+    
+    <section id="blog">
+      <h2>Latest Blog Posts</h2>
+      <article>
+        <h3>Blog Post 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisi vel purus luctus aliquet. Mauris lacinia suscipit turpis id efficitur.</p>
+      </article>
+      <article>
+        <h3>Blog Post 2</h3>
+        <p>Nulla facilisi. Donec ut tellus vitae massa vestibulum suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris vestibulum mauris vitae lectus tempor, et ullamcorper erat ultrices.</p>
+      </article>
+      
+      <!-- Create Blog Form -->
+      <div class="create-blog-form">
+        <h3>Create Blog</h3>
+        <form>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter the blog title" required>
+          </div>
+          <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" name="content" placeholder="Enter the blog content" rows="8" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" name="tags" placeholder="Enter tags for the blog (comma-separated)">
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Create Blog" class="btn">
+          </div>
+        </form>
+      </div>
+      <!-- End of Create Blog Form -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach out to me via email at <a href="mailto:example@example.com">example@example.com</a>.</p>
+        <p>Follow me on social media:</p>
+        <ul class="social-media">
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+    </section>
+  </main>
+
+  <img src="/static/imageOne.png" alt="">
+  
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
